@@ -1,31 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Ambulance, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Ambulance, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container-custom">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white pt-16 pb-8 overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-primary-600 p-2 rounded-lg">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-2.5 rounded-xl shadow-lg">
                 <Ambulance className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold">Morning Star</span>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed text-sm">
               Providing rapid, professional, and compassionate emergency medical transportation services 24/7. Your life is our priority.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary-600 transition-colors">
+            <div className="flex gap-3">
+              <a href="#" className="bg-white/10 backdrop-blur-sm p-2.5 rounded-full hover:bg-gradient-to-br hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-110">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary-600 transition-colors">
+              <a href="#" className="bg-white/10 backdrop-blur-sm p-2.5 rounded-full hover:bg-gradient-to-br hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-110">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/morningstarhealthcare/" className="bg-gray-800 p-2 rounded-full hover:bg-primary-600 transition-colors">
+              <a href="https://www.instagram.com/morningstarhealthcare/" className="bg-white/10 backdrop-blur-sm p-2.5 rounded-full hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 transition-all duration-300 hover:scale-110">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -33,48 +39,59 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 border-l-4 border-primary-600 pl-3">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+              Quick Links
+            </h3>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Our Services</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Support</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all">→ Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all">→ About Us</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all">→ Our Services</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all">→ Contact Support</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-bold mb-6 border-l-4 border-primary-600 pl-3">Our Services</h3>
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+              Our Services
+            </h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">Emergency Ambulance</li>
-              <li className="text-gray-400">ICU Transport</li>
-              <li className="text-gray-400">Patient Transfer</li>
-              <li className="text-gray-400">Event Medical Support</li>
+              <li className="text-gray-300">🚑 Emergency Ambulance</li>
+              <li className="text-gray-300">🏥 ICU Transport</li>
+              <li className="text-gray-300">🚐 Patient Transfer</li>
+              <li className="text-gray-300">🎪 Event Medical Support</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-6 border-l-4 border-primary-600 pl-3">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+              <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+              Contact Us
+            </h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary-500 mt-1 shrink-0" />
-                <span className="text-gray-400">#17-88/1,Kurakudivilai,Kanyakumari,Tamil Nadu-66</span>
+              <li className="flex items-start gap-3 group">
+                <MapPin className="h-5 w-5 text-blue-400 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-gray-300 text-sm"># 78M3+J6W VMP Street, Mekkamandapam, Tamil Nadu 629166</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary-500 shrink-0" />
-                <span className="text-gray-400">+91 9790154835, 7418128505</span>
+              <li className="flex items-center gap-3 group">
+                <Phone className="h-5 w-5 text-blue-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-gray-300 text-sm">+91 9790154835, 7418128505</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary-500 shrink-0" />
-                <span className="text-gray-400">morningstarhealthcareservicess@gmail.com</span>
+              <li className="flex items-center gap-3 group">
+                <Mail className="h-5 w-5 text-blue-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-gray-300 text-sm">morningstarhealthcareservicess@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Morning Star Health Care. All rights reserved.</p>
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-gray-400 text-sm flex items-center justify-center gap-2">
+            &copy; {new Date().getFullYear()} Morning Star Health Care. All rights reserved. Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> for saving lives.
+          </p>
         </div>
       </div>
     </footer>

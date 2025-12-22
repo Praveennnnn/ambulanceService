@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Ambulance } from 'lucide-react';
 import { Button } from './ui/Button';
@@ -6,7 +6,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -18,35 +27,49 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+        : 'bg-white shadow-md'
+    }`}>
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-primary-700 p-2 rounded-lg group-hover:bg-primary-800 transition-colors">
-              <Ambulance className="h-8 w-8 text-white" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-2.5 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <Ambulance className="h-7 w-7 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-gray-900 leading-none">MORNING STAR</span>
-              <span className="text-sm font-medium text-primary-600 leading-none">Health Care</span>
+              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 leading-none">
+                MORNING STAR
+              </span>
+              <span className="text-xs font-semibold text-gray-600 leading-none mt-1">Health Care Services</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary-700 ${
-                  isActive(link.path) ? 'text-primary-700 font-bold' : 'text-gray-600'
-                }`}
+                className="relative group"
               >
-                {link.name}
+                <span className={`text-sm font-semibold transition-colors ${
+                  isActive(link.path) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                }`}>
+                  {link.name}
+                </span>
+                {isActive(link.path) && (
+                  <motion.div
+                    layoutId="navbar-indicator"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
+                  />
+                )}
               </Link>
             ))}
             <a href="tel:911">
-              <Button variant="emergency" size="sm" className="gap-2 shadow-lg shadow-red-200">
+              <Button variant="emergency" size="sm" className="gap-2 shadow-lg shadow-red-200 hover:shadow-xl hover:scale-105 transition-all">
                 <Phone className="h-4 w-4" />
                 Emergency: 911
               </Button>
