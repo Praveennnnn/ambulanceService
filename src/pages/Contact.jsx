@@ -180,7 +180,7 @@ const Contact = () => {
               <input
                 {...register('name', { required: 'Name is required' })}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 transition-colors"
-                placeholder="John Doe"
+                placeholder="John"
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
             </div>
@@ -203,7 +203,7 @@ const Contact = () => {
               <input
                 {...register('phone')}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 transition-colors"
-                placeholder="+91 9876543210"
+                placeholder="+91 1234567890"
               />
             </div>
 
