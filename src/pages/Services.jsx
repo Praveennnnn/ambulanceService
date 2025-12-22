@@ -231,7 +231,7 @@ const Services = () => {
               href="tel:+919876543210" 
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-xl font-bold hover:bg-white/20 transition-all"
             >
-              Book Ambulance: +91 98765 43210
+              Book Ambulance: +91 97901 54835
             </a>
           </div>
         </div>
