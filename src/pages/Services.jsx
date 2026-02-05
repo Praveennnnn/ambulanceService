@@ -47,72 +47,123 @@ const Services = () => {
 
   const services = [
     {
-      title: 'Basic Life Support (BLS)',
+      title: 'Pre-Medical Examination',
       icon: Activity,
       image: serviceImg1,
-      description: 'Our BLS ambulances provide essential emergency medical care and safe transportation for non-critical patients requiring medical attention during transit.',
+      description: 'Comprehensive health assessments including pre-employment medical examinations, medical fitness certificates, medical camps, blood grouping tests, and laboratory investigations ensuring compliance with organizational and statutory requirements.',
       features: [
-        'Certified EMTs and Basic Paramedics',
-        'Oxygen therapy and airway management',
-        'Blood pressure and vital sign monitoring',
-        'First aid and wound care supplies',
-        'Spinal immobilization equipment',
-        'Automated External Defibrillator (AED)',
-        'Patient transfer assistance',
-        'Comfortable stretcher and seating'
+        'Pre-employment medical examinations',
+        'Medical fitness certificates',
+        'Medical camps for corporates & industries',
+        'Blood grouping tests',
+        'Comprehensive laboratory tests',
+        'Health screening programs',
+        'Statutory compliance evaluations',
+        'Accurate reporting and documentation'
       ],
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Advanced Life Support (ALS)',
-      icon: HeartPulse,
+      title: 'Training Programs',
+      icon: Users,
       image: serviceImg2,
-      description: 'Equipped with advanced medical technology and staffed by experienced paramedics, our ALS ambulances handle critical emergencies requiring intensive pre-hospital care.',
+      description: 'Professional training programs including first aid, CPR, advanced emergency training for EHS officers, construction worker safety, road safety, health education, HIV/AIDS awareness, blood and organ donation, and psychological support awareness.',
       features: [
-        'Advanced Cardiac Life Support trained paramedics',
-        'Cardiac monitors and 12-lead ECG',
-        'Defibrillator and external pacing',
-        'Advanced airway management equipment',
-        'IV therapy and emergency medications',
-        'Ventilator support',
-        'Continuous vital signs monitoring',
-        'Trauma and emergency kits'
+        'First aid training with hands-on practice',
+        'CPR training and AED operation',
+        'Advanced first aid for EHS officers',
+        'Construction worker safety training',
+        'Road safety awareness programs',
+        'Health education and wellness',
+        'HIV/AIDS and blood donation awareness',
+        'Psychological support awareness'
       ],
       gradient: 'from-red-500 to-pink-500'
     },
     {
-      title: 'Neonatal & Pediatric Transport',
-      icon: Baby,
+      title: 'Para Medical Services',
+      icon: Users,
       image: serviceImg3,
-      description: 'Specialized ambulances designed for the safe transport of newborns and children, with pediatric-trained medical staff and child-appropriate equipment.',
+      description: 'Skilled medical support through qualified doctors, trained nurses, certified first aiders, professional ambulance drivers, and compassionate caretakers for workplace and home healthcare operations.',
       features: [
-        'Neonatal and pediatric specialists',
-        'Infant incubator with temperature control',
-        'Pediatric ventilator and oxygen systems',
-        'Specialized monitoring equipment',
-        'IV pumps for neonatal medication',
-        'Phototherapy for jaundice treatment',
-        'Child-friendly environment',
-        'Parent/guardian accommodation'
+        'Qualified doctors for OHC operations',
+        'Trained nurses for patient care',
+        'Certified first aiders for emergencies',
+        'Professional ambulance drivers',
+        'Home healthcare caretakers',
+        'Medical surveillance and reporting',
+        'Emergency response coordination',
+        'Continuous medical monitoring'
       ],
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Event Medical Coverage',
-      icon: Users,
+      title: 'Ambulance Services',
+      icon: HeartPulse,
       image: serviceImg4,
-      description: 'Professional standby ambulance services for sporting events, concerts, weddings, corporate gatherings, and public functions ensuring immediate medical response.',
+      description: '24/7 emergency and non-emergency medical response with BLS and ALS ambulances, dedicated OHC ambulances for workplace emergencies, and patient transport services ensuring safe and timely medical care.',
       features: [
-        'On-site medical team with ambulance',
-        'First aid station setup',
-        'Immediate emergency response',
-        'Event risk assessment',
-        'Crowd medical management',
-        'Coordination with event organizers',
-        'Transport to hospital if needed',
-        'Post-event medical reporting'
+        'BLS ambulances with basic life support',
+        'ALS ambulances with advanced care',
+        'Dedicated ambulances for OHC sites',
+        'Patient transport services',
+        'Trained emergency medical staff',
+        '24/7 emergency response',
+        'Cardiac monitors and defibrillators',
+        'Advanced airway management'
       ],
       gradient: 'from-orange-500 to-yellow-500'
+    },
+    {
+      title: 'Medical Equipment Supply',
+      icon: Shield,
+      image: serviceImg1,
+      description: 'Quality medical equipment supply including monitoring devices, surgical instruments, and durable medical equipment for hospitals, clinics, OHCs, and home healthcare settings with focus on reliability and safety.',
+      features: [
+        'BP monitors and pulse oximeters',
+        'ECG machines and glucometers',
+        'Surgical instruments and tools',
+        'Hospital beds and examination tables',
+        'Wheelchairs and stretchers',
+        'Oxygen concentrators and cylinders',
+        'Suction machines and nebulizers',
+        'Patient monitoring equipment'
+      ],
+      gradient: 'from-green-500 to-teal-500'
+    },
+    {
+      title: 'Medicine Supply',
+      icon: Activity,
+      image: serviceImg2,
+      description: 'Comprehensive medicine supply services including first aid medicines, OHC statutory medicines, complete home medicine delivery covering chronic care medications, elderly care, and post-hospitalization support.',
+      features: [
+        'First aid medicines and consumables',
+        'OHC statutory medicine supply',
+        'Home delivery of all medicines',
+        'Chronic care medications',
+        'Elderly and pediatric medicines',
+        'Post-hospitalization medicine supply',
+        'Timely delivery and proper storage',
+        'Quality assurance and safety'
+      ],
+      gradient: 'from-indigo-500 to-blue-500'
+    },
+    {
+      title: 'Home Healthcare Services',
+      icon: Baby,
+      image: serviceImg3,
+      description: 'Patient-centered medical care at home including doctor consultations, skilled nursing care, and caretaker services supporting elderly care, chronic disease management, post-hospitalization recovery, and long-term care.',
+      features: [
+        'Home-based doctor consultations',
+        'Skilled nursing care at home',
+        'Medication administration and monitoring',
+        'Wound care and post-surgical support',
+        'Caretaker services for daily living',
+        'Vital sign monitoring and reporting',
+        'Patient education and family support',
+        'Coordination with medical teams'
+      ],
+      gradient: 'from-pink-500 to-rose-500'
     }
   ];
 
@@ -137,10 +188,10 @@ const Services = () => {
               Comprehensive Medical Transportation
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-300">Premium</span> Services
+              Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-300">Comprehensive</span> Services
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              From emergency response to specialized medical transport, we offer complete ambulance solutions with state-of-the-art equipment and highly trained medical professionals.
+              From pre-medical examinations and training programs to ambulance services and home healthcare, we deliver complete healthcare solutions for individuals, industries, and organizations with a focus on quality, compliance, and compassionate care.
             </p>
             <div className="w-32 h-1 bg-white/40 mx-auto rounded-full mt-8"></div>
           </motion.div>
@@ -217,21 +268,21 @@ const Services = () => {
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-16">
         <div className="w-[70%] mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Immediate Assistance?</h2>
-          <p className="text-xl mb-8 text-white/90">Our team is ready to respond 24/7 for all your medical transportation needs</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Healthcare Services?</h2>
+          <p className="text-xl mb-8 text-white/90">Contact us for OHC setup, medical examinations, training programs, ambulance services, or home healthcare solutions</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:911" 
+              href="tel:+919790154835" 
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl"
             >
               <HeartPulse className="h-5 w-5" />
-              Call Emergency: 911
+              Call Now: +91 97901 54835
             </a>
             <a 
-              href="tel:+919876543210" 
+              href="mailto:morningstarhealthcareservicess@gmail.com" 
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-xl font-bold hover:bg-white/20 transition-all"
             >
-              Book Ambulance: +91 97901 54835
+              Email Us
             </a>
           </div>
         </div>

@@ -119,10 +119,10 @@ const Home = () => {
               24/7 Emergency Medical Response
             </motion.span>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Every Second Counts when <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300">Life is at Stake</span>
+              Your Trusted Partner in <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300">Healthcare Excellence</span>
             </h1>
             <p className="text-xl text-gray-100 mb-8 leading-relaxed">
-              Morning Star Health Care provides rapid, professional ambulance services with certified paramedics and state-of-the-art medical equipment. Available 24/7 for emergency response and patient transportation.
+              Morning Star Health Care Services - Leading integrated healthcare network providing comprehensive OHC services, occupational health, pre-employment medical examinations, ambulance services, and home healthcare solutions across India.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:911">
@@ -151,8 +151,8 @@ const Home = () => {
                 <Zap className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 text-lg">Rapid Response</h3>
-                <p className="text-gray-600 text-sm">Under 8 minutes average</p>
+                <h3 className="font-bold text-gray-900 text-lg">Multi-City Presence</h3>
+                <p className="text-gray-600 text-sm">Bangalore, Chennai, Hyderabad, Kolkata & TN</p>
               </div>
             </div>
             <div className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow group">
@@ -160,8 +160,8 @@ const Home = () => {
                 <Shield className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 text-lg">Certified Team</h3>
-                <p className="text-gray-600 text-sm">100+ medical professionals</p>
+                <h3 className="font-bold text-gray-900 text-lg">Complete OHC Services</h3>
+                <p className="text-gray-600 text-sm">Setup, management & compliance</p>
               </div>
             </div>
             <div className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow group">
@@ -169,8 +169,8 @@ const Home = () => {
                 <HeartPulse className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 text-lg">Advanced Care</h3>
-                <p className="text-gray-600 text-sm">Latest medical equipment</p>
+                <h3 className="font-bold text-gray-900 text-lg">24/7 Healthcare</h3>
+                <p className="text-gray-600 text-sm">Emergency & occupational health</p>
               </div>
             </div>
           </div>
@@ -266,15 +266,15 @@ const Home = () => {
           </div>
           <div>
             <h2 className="text-primary-600 font-bold uppercase tracking-wider mb-2">About Morning Star</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Your Trusted Partner in Medical Emergencies</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Leading Integrated Healthcare Network</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              At Morning Star Health Care, we understand that medical emergencies can happen at any time. Our mission is to provide immediate, high-quality pre-hospital care and safe medical transportation to patients in need. With over 7 years of dedicated service, we've become a trusted name in emergency medical services.
+              Founded in Kanyakumari in 2021 by Dr. Subash David BSC, MBA, PHIL, Morning Star Health Care Services is a registered MSME and GST certified organization. We expanded to Bangalore and Chennai in 2022, Hyderabad in 2024, and Kolkata in 2025, now operating as a leading integrated healthcare network across South India.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our fleet of modern ambulances is equipped with cutting-edge medical technology, and our team of certified paramedics and EMTs undergo continuous training to handle critical situations with expertise and compassion.
+              We specialize in OHC setup and management, industrial and corporate health services, pre-employment medical examinations, training programs, ambulance services, medical equipment supply, and comprehensive home healthcare solutions. Our services ensure efficient, accessible, and affordable healthcare with strong focus on workplace safety and statutory compliance.
             </p>
             <ul className="space-y-4 mb-8">
-              {['24/7 Emergency Response', 'GPS-Enabled Rapid Dispatch', 'State-of-the-art Medical Equipment', 'Certified Paramedics & EMTs', 'Compassionate Patient Care', 'Affordable Services'].map((item, i) => (
+              {['Occupational Health Centre Services', 'Pre-Medical & Employment Exams', 'First Aid & CPR Training', 'BLS & ALS Ambulance Services', 'Medical Equipment & Medicine Supply', 'Home Healthcare Services'].map((item, i) => (
                 <li 
                   key={i} 
                   ref={el => featuresRef.current[i] = el}
@@ -309,21 +309,21 @@ const Home = () => {
         <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Emergency Ambulance",
-              desc: "Rapid response for critical situations with advanced life support capabilities, cardiac monitors, and emergency medications.",
+              title: "Occupational Health Centre",
+              desc: "Complete OHC setup, management, and on-site medical staffing with doctors, nurses, and first aiders ensuring workplace health compliance and employee well-being.",
               img: serviceImg1,
               gradient: "from-red-500 to-orange-500"
             },
             {
-              title: "ICU On Wheels",
-              desc: "Specialized critical care transport with ventilators, infusion pumps, and experienced intensivists for high-acuity patients.",
+              title: "Training Programs",
+              desc: "First aid, CPR, advanced emergency training for EHS officers, construction workers, road safety, health education, and psychological support awareness programs.",
               img: serviceImg2,
               size: 'w-200 h-auto',
               gradient: "from-blue-500 to-cyan-500"
            },
             {
-              title: "Patient Transfer",
-              desc: "Safe and comfortable non-emergency transport between hospitals, nursing facilities, or home with trained medical attendants.",
+              title: "Home Healthcare Services",
+              desc: "Doctor consultations, skilled nursing care, and caretaker services at home with medication management, wound care, and post-surgical support for comprehensive home-based medical care.",
               img: serviceImg3,
               gradient: "from-purple-500 to-pink-500"
             }

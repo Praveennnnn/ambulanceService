@@ -149,10 +149,10 @@ const About = () => {
             <span className="font-semibold">Excellence in Emergency Care</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-yellow-200 to-white">
-            About Morning Star Health Care
+            About Morning Star Health Care Services
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Dedicated to saving lives through rapid response and professional emergency medical care since 2010. Your health and safety are our top priority.
+            Founded in 2021, we are a leading integrated healthcare network delivering comprehensive OHC services, occupational health solutions, and medical services across Bangalore, Chennai, Hyderabad, Kolkata, and Tamil Nadu.
           </p>
         </div>
       </div>
@@ -181,7 +181,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-white/90 leading-relaxed">
-                  To provide the highest standard of pre-hospital emergency care and medical transportation with compassion, dignity, professionalism, and clinical excellence.
+                  To provide affordable, high-quality healthcare and medical services accessible to all, while maintaining the highest standards of clinical excellence, ethics, and compassion. We are committed to promoting preventive healthcare, occupational health and safety, and employee well-being through reliable, patient-centric, and industry-focused solutions.
                 </p>
               </div>
             </div>
@@ -197,9 +197,9 @@ const About = () => {
                 <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Team</h3>
+                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-white/90 leading-relaxed">
-                  A dedicated team of over 100 certified paramedics, emergency medical technicians, nurses, and experienced drivers trained to handle critical situations with expertise.
+                  To be the preferred and trusted choice for healthcare and medical service provision by saving lives, enriching well-being, and enhancing quality of life. We envision accessible, affordable, and high-quality healthcare reaching every individual and workplace across India.
                 </p>
               </div>
             </div>
@@ -215,9 +215,9 @@ const About = () => {
                 <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Award className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Values</h3>
+                <h3 className="text-2xl font-bold mb-4">Our Journey</h3>
                 <p className="text-white/90 leading-relaxed">
-                  Integrity, Clinical Excellence, Patient Safety, Compassionate Care, and Community Service guide every interaction with our patients.
+                  Founded by Dr. Subash David BSC, MBA, PHIL in Kanyakumari (2021), expanded to Bangalore & Chennai (2022), Hyderabad (2024), and Kolkata (2025). Registered under Udyam with valid MSME and GST certificates, partnering with leading organizations like L&T, Vestian, BCD Construction, and Voltas.
                 </p>
               </div>
             </div>
@@ -235,11 +235,11 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-                Why Choose Morning Star
+                Why Choose Morning Star Health Care
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              We combine advanced medical technology with compassionate care to deliver exceptional emergency medical services.
+              We deliver integrated healthcare solutions combining occupational health expertise, compliance management, and compassionate medical care tailored for industries and individuals.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full mt-6"></div>
           </div>
@@ -252,8 +252,8 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Zap className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Rapid Response</h3>
-              <p className="text-gray-700">Average response time of under 8 minutes with GPS-enabled dispatch and strategically located ambulances.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Multi-City Presence</h3>
+              <p className="text-gray-700">Operating across Bangalore, Chennai, Hyderabad, Kolkata, and Tamil Nadu with strategic expansion supporting nationwide growth.</p>
             </div>
 
             <div 
@@ -263,8 +263,8 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Shield className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Certified Professionals</h3>
-              <p className="text-gray-700">All paramedics are nationally certified with ongoing training in advanced cardiac life support and trauma care.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Comprehensive Services</h3>
+              <p className="text-gray-700">Complete OHC management, pre-employment exams, training programs, ambulance services, medical equipment and medicine supply, and home healthcare.</p>
             </div>
 
             <div 
@@ -274,8 +274,8 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Sparkles className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Advanced Equipment</h3>
-              <p className="text-gray-700">State-of-the-art medical technology including cardiac monitors, ventilators, and emergency medications.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Industry Expertise</h3>
+              <p className="text-gray-700">Proven track record with leading corporates including L&T, Vestian, BCD Construction, Voltas Enterprises, Alufit International, and Sona Infrabuil Pvt Ltd.</p>
             </div>
 
             <div 
@@ -285,8 +285,8 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Clock className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">24/7 Availability</h3>
-              <p className="text-gray-700">Round-the-clock emergency services, 365 days a year. Our team is always ready to respond.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Statutory Compliance</h3>
+              <p className="text-gray-700">MSME and GST certified with Udyam registration ensuring adherence to quality standards and regulatory requirements.</p>
             </div>
 
             <div 
@@ -296,8 +296,8 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <DollarSign className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Affordable Rates</h3>
-              <p className="text-gray-700">Transparent pricing with insurance support and flexible payment options for quality care.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Quality & Affordability</h3>
+              <p className="text-gray-700">Efficient, accessible, high-quality, and affordable healthcare solutions with strong focus on employee health and workplace safety.</p>
             </div>
 
             <div 
@@ -307,8 +307,8 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Heart className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Compassionate Care</h3>
-              <p className="text-gray-700">We treat every patient with dignity, respect, and empathy. Your comfort matters to us.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Patient-Centric Approach</h3>
+              <p className="text-gray-700">Dedicated to workplace health surveillance, preventive healthcare, and delivering timely, efficient medical services to individuals, industries, and organizations.</p>
             </div>
           </div>
         </div>
@@ -331,32 +331,32 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div ref={el => statsRef.current[0] = el} className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/30 transition-all duration-700 hover:scale-125 hover:shadow-2xl hover:shadow-red-500/50 cursor-pointer">
-                <div className="stat-number text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-yellow-300" data-value="15000" data-suffix="+">0</div>
-                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Lives Saved</div>
-                <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">❤️</div>
+                <div className="text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-yellow-300">2021</div>
+                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Founded</div>
+                <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">🏥</div>
               </div>
             </div>
             
             <div ref={el => statsRef.current[1] = el} className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/30 transition-all duration-700 hover:scale-125 hover:shadow-2xl hover:shadow-blue-500/50 cursor-pointer">
-                <div className="stat-number text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-cyan-300" data-value="50" data-suffix="+">0</div>
-                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Ambulances</div>
-                <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">🚑</div>
+                <div className="text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-cyan-300">5</div>
+                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Major Cities</div>
+                <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">📍</div>
               </div>
             </div>
             
             <div ref={el => statsRef.current[2] = el} className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/30 transition-all duration-700 hover:scale-125 hover:shadow-2xl hover:shadow-purple-500/50 cursor-pointer">
-                <div className="stat-number text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-pink-300" data-value="100" data-suffix="+">0</div>
-                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Medical Staff</div>
-                <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">👨‍⚕️</div>
+                <div className="text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-pink-300">7</div>
+                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Core Services</div>
+                <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">⭐</div>
               </div>
             </div>
             
             <div ref={el => statsRef.current[3] = el} className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/30 transition-all duration-700 hover:scale-125 hover:shadow-2xl hover:shadow-green-500/50 cursor-pointer">
                 <div className="text-5xl font-bold mb-2 transition-all duration-500 group-hover:scale-110 group-hover:text-green-300">24/7</div>
-                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Service</div>
+                <div className="text-white/80 font-medium transition-colors duration-500 group-hover:text-white">Healthcare</div>
                 <div className="mt-3 text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:animate-bounce">⏰</div>
               </div>
             </div>

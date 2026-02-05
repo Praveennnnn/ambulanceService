@@ -64,7 +64,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone Numbers',
-      info: '+91 9876543210 / +91 8765432109',
+      info: '+91 97901 54835',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
@@ -83,36 +83,36 @@ const Contact = () => {
 
   const faqs = [
     {
-      q: 'How quickly can you respond to an emergency?',
-      a: 'Our average response time is under 8 minutes in urban areas. We have strategically placed ambulances across the region to ensure rapid deployment.'
+      q: 'What services does Morning Star Health Care provide?',
+      a: 'We offer comprehensive healthcare services including OHC setup and management, pre-medical examinations, training programs (first aid, CPR, safety), ambulance services (BLS/ALS), medical equipment and medicine supply, and complete home healthcare services.'
     },
     {
-      q: 'What types of ambulances do you have?',
-      a: 'We operate Basic Life Support (BLS), Advanced Life Support (ALS), Neonatal, and ICU-equipped ambulances to handle all medical situations.'
+      q: 'In which cities do you operate?',
+      a: 'We operate across Bangalore, Chennai, Hyderabad, Kolkata, and Tamil Nadu (including Kanyakumari). We are continuously expanding our presence to serve more locations across India.'
     },
     {
-      q: 'Are your paramedics certified?',
-      a: 'Yes, all our paramedics and EMTs are nationally certified and undergo continuous training in emergency medical procedures and patient care.'
+      q: 'What is an Occupational Health Centre (OHC)?',
+      a: 'An OHC is a workplace medical facility we set up and manage with qualified doctors, nurses, and medical staff to provide on-site health services, emergency care, pre-employment exams, health surveillance, and ensure statutory compliance for industries and corporates.'
     },
     {
-      q: 'Do you provide inter-city ambulance services?',
-      a: 'Absolutely. We offer long-distance patient transfers with specialized medical care throughout the journey, including ventilator and ICU support.'
+      q: 'Do you provide training programs for employees?',
+      a: 'Yes, we conduct first aid training, CPR training, advanced emergency training for EHS officers, construction worker safety programs, road safety, health education, and psychological support awareness programs.'
     },
     {
-      q: 'What payment methods do you accept?',
-      a: 'We accept cash, all major credit/debit cards, UPI, and work with most insurance providers for direct billing arrangements.'
+      q: 'What types of ambulance services are available?',
+      a: 'We provide BLS (Basic Life Support) and ALS (Advanced Life Support) ambulances for emergencies, dedicated ambulances for OHC sites, and patient transport services available 24/7.'
     },
     {
-      q: 'Can I book an ambulance in advance for a scheduled transfer?',
-      a: 'Yes, you can pre-book our services for scheduled hospital transfers, medical appointments, or event standby coverage.'
+      q: 'Can you supply medical equipment and medicines?',
+      a: 'Yes, we supply monitoring equipment, surgical instruments, durable medical equipment for OHCs and home care, first aid medicines, OHC statutory medicines, and complete home medicine delivery including chronic care medications.'
     },
     {
-      q: 'What medical equipment is available in your ambulances?',
-      a: 'Our ambulances are equipped with cardiac monitors, defibrillators, oxygen systems, ventilators, IV medications, and emergency trauma supplies.'
+      q: 'What does your home healthcare service include?',
+      a: 'Our home healthcare includes doctor consultations, skilled nursing care, medication administration, wound care, post-surgical support, caretaker services for daily living, vital monitoring, and coordination with medical teams for elderly care, chronic disease management, and recovery.'
     },
     {
-      q: 'Do you provide ambulance services for events?',
-      a: 'Yes, we offer standby ambulance services for sports events, corporate gatherings, weddings, and public events to ensure immediate medical response if needed.'
+      q: 'Are you certified and compliant with regulations?',
+      a: 'Yes, we are registered under Udyam Registration of the Government of Tamil Nadu and hold valid MSME and GST certificates. We ensure full statutory compliance in all our healthcare services and operations.'
     }
   ];
 
@@ -135,7 +135,7 @@ const Contact = () => {
             </span>
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-            We're here to help 24/7. Reach out for emergency services, inquiries, or to schedule a patient transfer.
+            We're here to help 24/7. Reach out for OHC services, training programs, ambulance services, medical examinations, or home healthcare solutions.
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full mt-6"></div>
         </motion.div>
