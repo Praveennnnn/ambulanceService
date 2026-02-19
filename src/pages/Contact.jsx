@@ -59,19 +59,22 @@ const Contact = () => {
       icon: MapPin,
       title: 'Our Location',
       info: '78M3+J6W VMP Street, Mekkamandapam, Tamil Nadu 629166',
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-blue-500 to-cyan-500',
+      link: 'https://maps.google.com/?q=78M3+J6W+VMP+Street,+Mekkamandapam,+Tamil+Nadu+629166'
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
       info: '+91 97901 54835',
-      gradient: 'from-purple-500 to-pink-500'
+      gradient: 'from-purple-500 to-pink-500',
+      link: 'tel:+919790154835'
     },
     {
       icon: Mail,
       title: 'Email Address',
       info: 'morningstarhealthcareservicess@gmail.com',
-      gradient: 'from-orange-500 to-red-500'
+      gradient: 'from-orange-500 to-red-500',
+      link: 'mailto:morningstarhealthcareservicess@gmail.com'
     },
     {
       icon: Clock,
@@ -156,7 +159,18 @@ const Contact = () => {
                 <item.icon className="h-6 w-6 text-white" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.info}</p>
+              {item.link ? (
+                <a 
+                  href={item.link} 
+                  className="text-gray-600 hover:text-blue-600 text-sm leading-relaxed break-words inline-block transition-colors underline-offset-4 hover:underline"
+                  target={item.icon === MapPin ? "_blank" : undefined}
+                  rel={item.icon === MapPin ? "noopener noreferrer" : undefined}
+                >
+                  {item.info}
+                </a>
+              ) : (
+                <p className="text-gray-600 text-sm leading-relaxed">{item.info}</p>
+              )}
             </motion.div>
           ))}
         </div>

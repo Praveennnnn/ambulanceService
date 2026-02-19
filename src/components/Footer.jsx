@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Ambulance, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from 'lucide-react';
+import logo from '../images/image_2/logo-MS.png';
 
 const Footer = () => {
   return (
@@ -16,9 +17,11 @@ const Footer = () => {
           {/* Brand Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-2.5 rounded-xl shadow-lg">
-                <Ambulance className="h-6 w-6 text-white" />
-              </div>
+              <img 
+                src={logo} 
+                alt="Morning Star Health Care Services" 
+                className="h-12 w-auto object-contain"
+              />
               <span className="text-xl font-bold">Morning Star</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
@@ -74,15 +77,34 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 group">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 text-sm"># 78M3+J6W VMP Street, Mekkamandapam, Tamil Nadu 629166</span>
+                <a 
+                  href="https://maps.google.com/?q=78M3+J6W+VMP+Street,+Mekkamandapam,+Tamil+Nadu+629166" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white text-sm transition-colors"
+                >
+                  # 78M3+J6W VMP Street, Mekkamandapam, Tamil Nadu 629166
+                </a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone className="h-5 w-5 text-blue-400 shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 text-sm">+91 9790154835, 7418128505</span>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919790154835" className="text-gray-300 hover:text-white text-sm transition-colors">
+                    +91 97901 54835
+                  </a>
+                  <a href="tel:+917418128505" className="text-gray-300 hover:text-white text-sm transition-colors">
+                    +91 74181 28505
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3 group">
                 <Mail className="h-5 w-5 text-blue-400 shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 text-sm">morningstarhealthcareservicess@gmail.com</span>
+                <a 
+                  href="mailto:morningstarhealthcareservicess@gmail.com"
+                  className="text-gray-300 hover:text-white text-sm transition-colors break-all"
+                >
+                  morningstarhealthcareservicess@gmail.com
+                </a>
               </li>
             </ul>
           </div>

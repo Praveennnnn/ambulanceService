@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Ambulance } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Button } from './ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../images/image_2/logo-MS.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -36,9 +38,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-2.5 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <Ambulance className="h-7 w-7 text-white" />
-            </div>
+            <img 
+              src={logo} 
+              alt="Morning Star Health Care Services" 
+              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 leading-none">
                 MORNING STAR
@@ -68,10 +72,10 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            <a href="tel:911">
-              <Button variant="emergency" size="sm" className="gap-2 shadow-lg shadow-red-200 hover:shadow-xl hover:scale-105 transition-all">
+            <a href="tel:+919790154835">
+              <Button variant="primary" size="sm" className="gap-2 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
                 <Phone className="h-4 w-4" />
-                Emergency: 911
+                +91 97901 54835
               </Button>
             </a>
           </div>
@@ -113,10 +117,10 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <a href="tel:911" className="block">
-                  <Button variant="emergency" className="w-full gap-2">
+                <a href="tel:+919790154835" className="block">
+                  <Button variant="primary" className="w-full gap-2">
                     <Phone className="h-4 w-4" />
-                    Call Emergency
+                    Call Us: +91 97901 54835
                   </Button>
                 </a>
               </div>
