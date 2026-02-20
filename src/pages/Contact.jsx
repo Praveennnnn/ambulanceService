@@ -46,12 +46,49 @@ const Contact = () => {
   return () => ctx.revert(); // 🔥 REQUIRED
 }, []);
 
-
+  // EmailJS configuration from environment variables
+  const emailJsConfig = {
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  };
 
   const onSubmit = (data) => {
-    console.log('Form Data:', data);
-    alert('Thank you! We will get back to you shortly.');
-    reset();
+    // Check if EmailJS is configured
+    if (!emailJsConfig.serviceId || !emailJsConfig.templateId || !emailJsConfig.publicKey) {
+      console.error('EmailJS not configured. Please set up environment variables.');
+      alert('Contact form is not configured. Please contact us directly at +91 97901 54835');
+      return;
+    }
+
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      phone: data.phone || 'Not provided',
+      message: data.message,
+      to_email: 'morningstarhealthcareservicess@gmail.com'
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        templateParams,
+        emailJsConfig.publicKey
+      )
+      .then(
+        (response) => {
+          console.log('Email sent successfully!', response.status, response.text);
+          alert('Thank you! Your message has been sent. We will get back to you shortly.');
+          reset();
+        },
+        (error) => {
+          console.error('Failed to send email:', error);
+          alert('Sorry, there was an error sending your message. Please call us at +91 97901 54835');
+        }
+      );
   };
 
   const contactInfo = [

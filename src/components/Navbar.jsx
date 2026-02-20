@@ -38,11 +38,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={logo} 
-              alt="Morning Star Health Care Services" 
-              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-            />
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-xl border-2 border-blue-200 shadow-md group-hover:shadow-lg group-hover:border-blue-400 transition-all duration-300">
+              <img 
+                src={logo} 
+                alt="Morning Star Health Care Services" 
+                className="h-12 w-12 object-contain group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 leading-none">
                 MORNING STAR

@@ -479,104 +479,132 @@ const Services = () => {
       </div>
 
       {/* Services Section */}
-      <div className="container-custom space-y-24 py-16">
-        <div className="text-center mb-12">
+      <div className="container-custom py-16">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              Detailed Service Information
+              Complete Service Details
             </span>
           </h2>
-          <p className="text-gray-600 text-lg">Everything you need to know about each service we provide</p>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">Clear, detailed information about each healthcare service we provide</p>
         </div>
 
-        {services.map((service, index) => (
-          <div
-            key={index}
-            id={`service-${index}`}
-            ref={el => serviceCardsRef.current[index] = el}
-            className={`scroll-mt-24 flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-start bg-gradient-to-br ${
-              index % 4 === 0 ? 'from-blue-50 to-cyan-50' :
-              index % 4 === 1 ? 'from-purple-50 to-pink-50' :
-              index % 4 === 2 ? 'from-orange-50 to-red-50' :
-              'from-green-50 to-emerald-50'
-            } p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500`}
-          >
-            {/* Image Section */}
-            <div className="w-full lg:w-1/2 relative group sticky top-8">
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-20 rounded-2xl transform group-hover:scale-105 transition-transform duration-500`}></div>
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-80 object-cover rounded-2xl shadow-lg relative z-10"
-              />
-              <div className={`absolute -top-4 -right-4 bg-gradient-to-br ${service.gradient} p-4 rounded-xl shadow-xl z-20`}>
-                <service.icon className="h-8 w-8 text-white" />
-              </div>
-            </div>
+        <div className="space-y-16">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              id={`service-${index}`}
+              ref={el => serviceCardsRef.current[index] = el}
+              className="scroll-mt-24"
+            >
+              {/* Service Header Card */}
+              <div className={`bg-gradient-to-br ${
+                index % 4 === 0 ? 'from-blue-50 to-cyan-50' :
+                index % 4 === 1 ? 'from-purple-50 to-pink-50' :
+                index % 4 === 2 ? 'from-orange-50 to-red-50' :
+                'from-green-50 to-emerald-50'
+              } rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all`}>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative h-64 lg:h-full min-h-[300px]">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                    <div className={`absolute bottom-6 left-6 bg-gradient-to-br ${service.gradient} p-3 rounded-xl shadow-lg`}>
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
 
-            {/* Content Section */}
-            <div className="w-full lg:w-1/2 space-y-6">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
-                  {service.title}
-                </h2>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  {service.description}
-                </p>
-                {service.simpleDesc && (
-                  <div className="mt-4 bg-white p-4 rounded-xl border-2 border-blue-200">
-                    <p className="text-sm font-semibold text-blue-600 mb-2">💡 In Simple Terms:</p>
-                    <p className="text-gray-700 leading-relaxed">{service.simpleDesc}</p>
+                  {/* Title & Description */}
+                  <div className="p-8">
+                    <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
+                      {service.title}
+                    </h2>
+                    <p className="text-gray-700 text-base leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    
+                    {/* Simple Description Badge */}
+                    {service.simpleDesc && (
+                      <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm">
+                        <p className="text-xs font-bold text-blue-600 mb-2 uppercase tracking-wide">Quick Summary</p>
+                        <p className="text-gray-700 text-sm leading-relaxed">{service.simpleDesc}</p>
+                      </div>
+                    )}
+
+                    {/* Badges */}
+                    <div className="flex flex-wrap gap-2 mt-6">
+                      <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm text-xs font-semibold">
+                        <Clock className="h-3.5 w-3.5 text-blue-600" />
+                        <span className="text-gray-700">24/7 Available</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm text-xs font-semibold">
+                        <Calendar className="h-3.5 w-3.5 text-purple-600" />
+                        <span className="text-gray-700">Bookable</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm text-xs font-semibold">
+                        <Shield className="h-3.5 w-3.5 text-green-600" />
+                        <span className="text-gray-700">Certified</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                
+                {/* Key Features - More Prominent */}
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    What You Get
+                  </h3>
+                  <ul className="space-y-2.5">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm">
+                        <CheckCircle className={`h-4 w-4 ${
+                          index % 4 === 0 ? 'text-blue-600' :
+                          index % 4 === 1 ? 'text-purple-600' :
+                          index % 4 === 2 ? 'text-orange-600' :
+                          'text-green-600'
+                        } flex-shrink-0 mt-0.5`} />
+                        <span className="text-gray-700 leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Sub-Services */}
+                {service.subServices && service.subServices.length > 0 && (
+                  <div className="bg-white p-6 rounded-xl shadow-md">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      <Sparkles className="h-5 w-5 text-purple-600" />
+                      Specialized Services
+                    </h3>
+                    <div className="space-y-3">
+                      {service.subServices.map((subService, idx) => (
+                        <div key={idx} className={`p-3 rounded-lg border-l-3 ${
+                          idx % 3 === 0 ? 'bg-blue-50 border-blue-400' :
+                          idx % 3 === 1 ? 'bg-purple-50 border-purple-400' :
+                          'bg-green-50 border-green-400'
+                        }`}>
+                          <h4 className="font-bold text-gray-900 text-sm mb-1">{subService.name}</h4>
+                          <p className="text-gray-600 text-xs leading-relaxed">{subService.desc}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
-
-              {/* Sub-Services */}
-              {service.subServices && service.subServices.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-purple-600" />
-                    Our Offerings
-                  </h3>
-                  <div className="space-y-4">
-                    {service.subServices.map((subService, idx) => (
-                      <div key={idx} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all">
-                        <h4 className="font-bold text-gray-900 mb-2">{subService.name}</h4>
-                        <p className="text-gray-600 text-sm leading-relaxed">{subService.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-blue-600" />
-                  Key Features
-                </h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3 group">
-                      <div className={`mt-1 h-2 w-2 rounded-full bg-gradient-to-r ${service.gradient} flex-shrink-0 group-hover:scale-150 transition-transform`}></div>
-                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex flex-wrap gap-3 pt-4">
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-                  <Clock className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm font-semibold text-gray-700">24/7 Available</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-                  <Calendar className="h-4 w-4 text-purple-600" />
-                  <span className="text-sm font-semibold text-gray-700">Pre-booking Available</span>
-                </div>
-              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Why Choose Us Section */}
@@ -628,7 +656,7 @@ const Services = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="py-16 bg-white">
+      {/* <div className="py-16 bg-white">
         <div className="container-custom max-w-4xl">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-purple-100 px-4 py-2 rounded-full mb-4">
@@ -717,7 +745,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-16">

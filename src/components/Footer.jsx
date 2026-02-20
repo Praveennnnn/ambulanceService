@@ -21,6 +21,7 @@ const Footer = () => {
                 src={logo} 
                 alt="Morning Star Health Care Services" 
                 className="h-12 w-auto object-contain"
+                loading="lazy"
               />
               <span className="text-xl font-bold">Morning Star</span>
             </div>

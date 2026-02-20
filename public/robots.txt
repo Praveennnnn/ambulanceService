@@ -1,0 +1,27 @@
+# Morning Star Health Care Services - Robots Configuration
+# www.morningstarhealthcare.in
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://morningstarhealthcare.in/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

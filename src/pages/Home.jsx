@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, Shield, HeartPulse, Phone, Zap, Award, Users } from 'lucide-react';
@@ -8,20 +8,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import carousel1 from '../images/morningstarhealthcare-18-09-2025-0001.webp';
-import carousel2 from '../images/Screenshot 2025-12-13 103115.png';
-import carousel3 from '../images/morningstarhealthcare-18-09-2025-0003.webp';
-import carousel4 from '../images/morningstarhealthcare-18-09-2025-0004.webp';
-import carousel5 from '../images/morningstarhealthcare-18-09-2025-0005.webp';
-import carousel6 from '../images/image_1/IMG-20250116-WA0130.jpg.jpeg';
-import carousel7 from '../images/image_1/IMG-20250925-WA0135.jpg.jpeg';
-import carousel8 from '../images/image_1/IMG-20250308-WA0191.jpg.jpeg';
+import healthcareVideo from '../videos/VID_20260220111944.mp4';
 import teamImg from '../images/IMG_20250918_123859.png';
 import serviceImg1 from '../images/Screenshot 2025-12-13 214931.png';
 import serviceImg2 from '../images/image_1/IMG-20250116-WA0130.jpg.jpeg';
 import serviceImg3 from '../images/home healthcare.jpeg';
 import galleryImg1 from '../images/image_1/IMG-20240110-WA0036.jpg.jpeg';
-import galleryImg2 from '../images/image_1/IMG-20240110-WA0055.jpg.jpeg';
+import galleryImg2 from '../images/image_2/IMG-20250925-WA0126.jpg.jpeg';
 import galleryImg3 from '../images/image_1/IMG-20250116-WA0062.jpg.jpeg';
 import galleryImg4 from '../images/image_1/IMG-20250116-WA0136.jpg.jpeg';
 import galleryImg5 from '../images/image_1/IMG-20250120-WA0067.jpg.jpeg';
@@ -37,37 +30,8 @@ import award2 from '../images/awards/WhatsApp Image 2026-02-19 at 3.44.11 PM (1)
 import award3 from '../images/awards/WhatsApp Image 2026-02-19 at 3.44.11 PM.jpeg';
 
 const Home = () => {
-  const carouselImages = [
-    { img: carousel1, title: 'Professional Ambulance Fleet', desc: 'BLS & ALS ambulances equipped with advanced life support systems' },
-    { img: carousel2, title: 'Occupational Health Centre', desc: 'On-site OHC facilities providing comprehensive workplace healthcare' },
-    { img: carousel3, title: 'Emergency Medical Response', desc: '24/7 emergency services with trained medical professionals' },
-    { img: carousel4, title: 'Healthcare Training Programs', desc: 'First aid, CPR, and advanced emergency response training' },
-    { img: carousel5, title: 'Medical Equipment & Supplies', desc: 'Quality medical equipment for hospitals, OHCs, and home care' },
-    { img: carousel6, title: 'On-Site Medical Services', desc: 'Comprehensive medical support at construction and corporate sites' },
-    { img: carousel7, title: 'Health Awareness Programs', desc: 'Community health camps and preventive healthcare initiatives' },
-    { img: carousel8, title: 'Professional Healthcare Team', desc: 'Qualified doctors, nurses, and emergency medical technicians' }
-  ];
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [progress, setProgress] = useState(0);
   const featuresRef = useRef([]);
   const servicesRef = useRef([]);
-
-  useEffect(() => {
-    if (isPaused) return;
-    
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setActiveIndex((p) => (p + 1) % carouselImages.length);
-          return 0;
-        }
-        return prev + (100 / 35); // 3500ms = 35 * 100ms
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [isPaused, carouselImages.length]);
 
  useEffect(() => {
   const ctx = gsap.context(() => {
@@ -128,6 +92,7 @@ const Home = () => {
             src="https://images.unsplash.com/photo-1584555613497-9ecf9dd06f68?q=80&w=2070&auto=format&fit=crop" 
             alt="Ambulance Service" 
             className="w-full h-full object-cover"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-purple-900/90 to-pink-900/80"></div>
           
@@ -215,181 +180,49 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Image Carousel Section */}
-      <section className="py-16 bg-white">
+      {/* Video Showcase Section */}
+      <section className="py-12 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-                Our Fleet & Facilities
+                Our Healthcare Services in Action
               </span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-4">
-              State-of-the-art medical equipment, trained professionals, and comprehensive healthcare infrastructure
+            <p className="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+              Experience our commitment to excellence and comprehensive healthcare delivery
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
           </div>
           
-          <div 
-            className="relative w-full max-w-6xl mx-auto"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => {
-              setIsPaused(false);
-              setProgress(0);
-            }}
-          >
-            <div className="relative h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-3xl shadow-2xl group">
-              {carouselImages.map((item, i) => (
-                <div
-                  key={i}
-                  className={`absolute inset-0 transition-all duration-1000 ${
-                    i === activeIndex 
-                      ? 'opacity-100 z-10 scale-100' 
-                      : 'opacity-0 z-0 scale-105'
-                  }`}
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                  
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                  
-                  {/* Caption overlay with animation */}
-                  <div className={`absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white transition-all duration-700 ${
-                    i === activeIndex 
-                      ? 'translate-y-0 opacity-100' 
-                      : 'translate-y-8 opacity-0'
-                  }`}>
-                    <div className="max-w-4xl">
-                      <motion.h3 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={i === activeIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ delay: 0.3, duration: 0.6 }}
-                        className="text-2xl md:text-4xl font-bold mb-3 drop-shadow-lg"
-                      >
-                        {item.title}
-                      </motion.h3>
-                      <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={i === activeIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ delay: 0.5, duration: 0.6 }}
-                        className="text-base md:text-lg text-white/90 drop-shadow-md"
-                      >
-                        {item.desc}
-                      </motion.p>
-                    </div>
-                  </div>
-
-                  {/* Number indicator */}
-                  <div className={`absolute top-8 left-8 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full transition-all duration-700 ${
-                    i === activeIndex 
-                      ? 'translate-x-0 opacity-100' 
-                      : '-translate-x-8 opacity-0'
-                  }`}>
-                    <span className="text-white font-bold text-sm">
-                      {String(i + 1).padStart(2, '0')} / {String(carouselImages.length).padStart(2, '0')}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Navigation Controls */}
-            <div className="absolute inset-y-0 left-0 flex items-center pl-4 z-20">
-              <button
-                onClick={() => {
-                  setActiveIndex((p) => (p - 1 + carouselImages.length) % carouselImages.length);
-                  setProgress(0);
-                }}
-                className="bg-white/90 backdrop-blur-sm text-gray-900 rounded-full w-14 h-14 flex items-center justify-center hover:bg-white hover:scale-110 transition-all shadow-xl opacity-0 group-hover:opacity-100"
-                aria-label="Previous slide"
+          <div className="relative w-full max-w-4xl mx-auto">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-video">
+              <video 
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
               >
-                <span className="text-3xl font-bold leading-none">‹</span>
-              </button>
-            </div>
-
-            <div className="absolute inset-y-0 right-0 flex items-center pr-4 z-20">
-              <button
-                onClick={() => {
-                  setActiveIndex((p) => (p + 1) % carouselImages.length);
-                  setProgress(0);
-                }}
-                className="bg-white/90 backdrop-blur-sm text-gray-900 rounded-full w-14 h-14 flex items-center justify-center hover:bg-white hover:scale-110 transition-all shadow-xl opacity-0 group-hover:opacity-100"
-                aria-label="Next slide"
-              >
-                <span className="text-3xl font-bold leading-none">›</span>
-              </button>
-            </div>
-
-            {/* Pause/Play Button */}
-            <button
-              onClick={() => {
-                setIsPaused(!isPaused);
-                if (isPaused) setProgress(0);
-              }}
-              className="absolute top-8 right-8 z-20 bg-white/20 backdrop-blur-md text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-white/30 transition-all shadow-xl opacity-0 group-hover:opacity-100"
-              aria-label={isPaused ? "Play" : "Pause"}
-            >
-              {isPaused ? (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-                </svg>
-              )}
-            </button>
-
-            {/* Thumbnail Navigation with Progress */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
-              {carouselImages.map((item, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setActiveIndex(idx);
-                    setProgress(0);
-                  }}
-                  className="group/thumb relative"
-                  aria-label={`Go to slide ${idx + 1}`}
-                >
-                  <div className={`transition-all rounded-lg overflow-hidden ${
-                    idx === activeIndex 
-                      ? 'ring-2 ring-white w-20 h-16' 
-                      : 'w-16 h-12 opacity-60 hover:opacity-100'
-                  }`}>
-                    <img 
-                      src={item.img} 
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {idx === activeIndex && !isPaused && (
-                    <div className="absolute bottom-0 left-0 h-1 bg-white rounded-full transition-all duration-100"
-                         style={{ width: `${progress}%` }}
-                    />
-                  )}
-                </button>
-              ))}
+                <source src={healthcareVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
           {/* Feature Tags */}
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <div className="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-cyan-50 px-6 py-3 rounded-full border-2 border-blue-200">
-              <HeartPulse className="h-5 w-5 text-blue-600" />
-              <span className="text-gray-800 font-semibold text-sm">Advanced Life Support</span>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 rounded-full border border-blue-200">
+              <HeartPulse className="h-4 w-4 text-blue-600" />
+              <span className="text-gray-800 font-semibold text-xs md:text-sm">Advanced Life Support</span>
             </div>
-            <div className="flex items-center gap-2 bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-3 rounded-full border-2 border-purple-200">
-              <Clock className="h-5 w-5 text-purple-600" />
-              <span className="text-gray-800 font-semibold text-sm">24/7 Availability</span>
+            <div className="flex items-center gap-2 bg-gradient-to-r from-purple-50 to-pink-50 px-4 py-2 rounded-full border border-purple-200">
+              <Clock className="h-4 w-4 text-purple-600" />
+              <span className="text-gray-800 font-semibold text-xs md:text-sm">24/7 Availability</span>
             </div>
-            <div className="flex items-center gap-2 bg-gradient-to-r from-green-50 to-emerald-50 px-6 py-3 rounded-full border-2 border-green-200">
-              <Shield className="h-5 w-5 text-green-600" />
-              <span className="text-gray-800 font-semibold text-sm">Certified Professionals</span>
+            <div className="flex items-center gap-2 bg-gradient-to-r from-green-50 to-emerald-50 px-4 py-2 rounded-full border border-green-200">
+              <Shield className="h-4 w-4 text-green-600" />
+              <span className="text-gray-800 font-semibold text-xs md:text-sm">Certified Professionals</span>
             </div>
           </div>
         </div>
@@ -447,6 +280,7 @@ const Home = () => {
                src={teamImg}
               alt="Medical Team" 
               className="rounded-2xl shadow-2xl"
+              loading="lazy"
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-600 to-purple-600 text-white p-8 rounded-xl shadow-xl">
               <p className="text-4xl font-bold mb-1">2021</p>
@@ -528,6 +362,7 @@ const Home = () => {
                   src={award1} 
                   alt="Award Certificate" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -550,6 +385,7 @@ const Home = () => {
                   src={award2} 
                   alt="Award Certificate" 
                   className="w-full h-75 object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -572,6 +408,7 @@ const Home = () => {
                   src={award3} 
                   alt="Award Certificate" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -590,7 +427,7 @@ const Home = () => {
           </div>
 
           {/* Additional Awards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group border-2 border-transparent hover:border-yellow-400">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
                 <Award className="h-8 w-8 text-white" />
@@ -644,7 +481,7 @@ const Home = () => {
               <p className="text-center text-purple-600 font-semibold mb-3">Highwood Entertainment - 2025</p>
               <p className="text-gray-600 text-sm text-center">Consistent performance and integrated healthcare delivery</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -820,6 +657,17 @@ const Home = () => {
               <span className="bg-white px-4 py-2 rounded-full shadow">Red Cross Training Centre</span>
               <span className="bg-white px-4 py-2 rounded-full shadow">Universal Pharmacy</span>
               <span className="bg-white px-4 py-2 rounded-full shadow">Apollo Pharmacy</span>
+              <span className="bg-white px-4 py-2 rounded-full shadow">Mount Shepherd Group of Institutions</span>
+              <span className="bg-white px-4 py-2 rounded-full shadow">St. John Ambulance – First Aid Training Centre</span>
+              <span className="bg-white px-4 py-2 rounded-full shadow">Prolife Hospital, Hebbal – Bangalore.</span>
+              <span className="bg-white px-4 py-2 rounded-full shadow">Maya Multi speciality Hospital – Bangalore</span>
+              <span className="bg-white px-4 py-2 rounded-full shadow">Chandrasekaran Hospital – Kanyakumari, Tamil Nadu.</span>
+
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -863,6 +711,7 @@ const Home = () => {
                   src={item.img} 
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -937,6 +786,7 @@ const Home = () => {
                   src={service.img} 
                   alt={service.title} 
                   className={`w-full h-full ${service.size === 'auto' ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-700`}
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">

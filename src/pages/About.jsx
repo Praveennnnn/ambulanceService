@@ -174,8 +174,11 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
                 Our Founder & CEO
               </h2>
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">
-                Dr. Subash David BSC, MBA, PHIL
+             <h3 className="text-2xl font-bold text-blue-600 mb-4">
+                Dr. Subash David{" "}
+                <span className="text-base font-normal lowercase">
+                  bsc, mba, phil
+                </span>
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 With a clear vision to make quality healthcare accessible, reliable, and affordable for all, Dr. Subash David founded Morning Star Health Care Services in Kanyakumari in 2021. His leadership combines clinical expertise with strategic business acumen, driving the organization's rapid expansion and growth.
@@ -190,12 +193,15 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <img 
-                src={founderImg}
-                alt="Dr. Subash David - Founder & CEO" 
-                className="rounded-2xl shadow-2xl"
-              />
+            <div className="relative max-w-md mx-auto lg:mx-0">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-4 shadow-2xl">
+                <img 
+                  src={founderImg}
+                  alt="Dr. Subash David - Founder & CEO" 
+                  className="w-full h-[350px] object-contain rounded-xl"
+                  loading="lazy"
+                />
+              </div>
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-orange-500 to-red-500 text-white p-6 rounded-xl shadow-xl">
                 <p className="text-3xl font-bold mb-1">2021</p>
                 <p className="text-sm opacity-90">Founded</p>
