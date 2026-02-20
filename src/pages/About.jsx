@@ -426,7 +426,8 @@ const About = () => {
                 'BCD Construction',
                 'Sona Infrabuild Pvt. Ltd.',
                 'Sobha Projects & Trade Pvt Ltd',
-                'Wehands Interio and DTC',
+                'Wehands Interio',
+                'DTC',
                 'Anhal Electricals'
               ].map((client, idx) => (
                 <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-blue-100 hover:border-blue-300 text-center">
@@ -444,9 +445,14 @@ const About = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { name: 'Prolife Hospital, Hebbal', location: 'Bangalore' },
-                { name: 'Maya Multi speciality Hospital', location: 'Bangalore' },
-                { name: 'Chandrasekaran Hospital', location: 'Kanyakumari, Tamil Nadu' }
+                { name: 'Prolife Hospital, Hebbal', location: 'Bangalore,Karnataka' },
+                { name: 'Maya Multi speciality Hospital', location: 'Bangalore,Karnataka' },
+                { name: 'Chandrasekaran Hospital', location: 'Kanyakumari, Tamil Nadu' },
+                { name: 'Manipal Hospital', location: 'Bangalore,Karnataka' },
+                { name: 'Apollo Hospital', location: 'Chennai, Tamil Nadu' },
+                { name: 'Global Health Care Hospital', location: 'Bangalore,Karnataka' }
+
+
               ].map((hospital, idx) => (
                 <div key={idx} className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-red-100 hover:border-red-300">
                   <p className="font-bold text-gray-800 mb-2">{hospital.name}</p>
