@@ -176,8 +176,8 @@ const About = () => {
               </h2>
              <h3 className="text-2xl font-bold text-blue-600 mb-4">
                 Dr. Subash David{" "}
-                <span className="text-base font-normal lowercase">
-                  bsc, mba, phil
+                <span className="text-base font-normal ">
+                  Bsc, MBA, PHIL
                 </span>
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">

@@ -374,7 +374,7 @@ const Home = () => {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Healthcare Excellence</h3>
-                <p className="text-purple-600 font-semibold mb-2 text-sm">Award Certificate - 2024</p>
+                <p className="text-purple-600 font-semibold mb-2 text-sm">Award Certificate - 2025</p>
                 <p className="text-gray-600 text-sm">Recognition for outstanding service delivery and commitment to healthcare excellence</p>
               </div>
             </div>
@@ -420,7 +420,7 @@ const Home = () => {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-gray-900 text-lg mb-2">Excellence Award</h3>
-                <p className="text-purple-600 font-semibold mb-2 text-sm">Achievement Award - 2024</p>
+                <p className="text-purple-600 font-semibold mb-2 text-sm">Achievement Award - 2023</p>
                 <p className="text-gray-600 text-sm">Honored for exceptional contributions to healthcare and community service</p>
               </div>
             </div>
@@ -636,7 +636,7 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {['L&T Building & Construction', 'Vestian', 'Voltas Limited (TATA)', 'Alufit International', 'BCD Construction', 'Sona Infrabuild', 'Sobha Projects', 'JPMC India'].map((client, idx) => (
+            {['L&T Building & Construction', 'Vestian', 'Voltas Limited (TATA)', 'Alufit International', 'BCD Construction', 'Sona Infrabuild', 'Sobha Projects', 'Century Construction'].map((client, idx) => (
               <div 
                 key={idx}
                 className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center text-center h-32 group"
