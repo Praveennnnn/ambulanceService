@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { Button } from './ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../images/image_2/logo-MS.png';
@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const mobileMenuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,40 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  // Close menu on Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isOpen]);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(e.target) && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -38,12 +73,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-xl border-2 border-blue-200 shadow-md group-hover:shadow-lg group-hover:border-blue-400 transition-all duration-300">
+            <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-2 rounded-xl border-2 border-blue-400 shadow-md group-hover:shadow-lg group-hover:border-blue-300 transition-all duration-300 overflow-hidden">
               <img 
                 src={logo} 
                 alt="Morning Star Health Care Services" 
-                className="h-12 w-12 object-contain group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
+                className="h-12 w-12 object-contain group-hover:scale-110 transition-transform duration-300 relative z-10"
+                loading="eager"
               />
             </div>
             <div className="flex flex-col">
@@ -75,19 +110,35 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            <a href="tel:+919790154835">
-              <Button variant="primary" size="sm" className="gap-2 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
-                <Phone className="h-4 w-4" />
-                +91 97901 54835
-              </Button>
-            </a>
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://wa.me/919790154835?text=Hello%20Morning%20Star%20Health%20Care%2C%20I%20need%20assistance" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white rounded-lg font-semibold text-sm hover:bg-green-600 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </a>
+              <a href="tel:+919790154835" className="relative">
+                <Button variant="primary" size="sm" className="gap-2 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+                  <Phone className="h-4 w-4" />
+                  +91 97901 54835
+                </Button>
+                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md animate-pulse">
+                  24/7
+                </span>
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-primary-700 focus:outline-none"
+              className="text-gray-600 hover:text-primary-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isOpen}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -99,6 +150,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            ref={mobileMenuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -110,21 +162,33 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-3 rounded-md text-base font-medium ${
+                  className={`block px-3 py-3 rounded-md text-base font-medium relative ${
                     isActive(link.path)
-                      ? 'bg-primary-50 text-primary-700'
+                      ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-l-4 border-blue-600'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4">
-                <a href="tel:+919790154835" className="block">
+              <div className="pt-4 space-y-3">
+                <a 
+                  href="https://wa.me/919790154835?text=Hello%20Morning%20Star%20Health%20Care%2C%20I%20need%20assistance" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-all shadow-lg"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Chat on WhatsApp
+                </a>
+                <a href="tel:+919790154835" className="block relative">
                   <Button variant="primary" className="w-full gap-2">
                     <Phone className="h-4 w-4" />
-                    Call Us: +91 97901 54835
+                    Call: +91 97901 54835
                   </Button>
+                  <span className="absolute top-0 right-0 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
+                    24/7 Emergency
+                  </span>
                 </a>
               </div>
             </div>

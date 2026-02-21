@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import serviceImg1 from '../images/image_2/IMG_20251026_120100_8.jpg.jpeg';
 import serviceImg2 from '../images/morningstarhealthcare-18-09-2025-0001.webp';
-import serviceImg3 from '../images/Screenshot 2025-12-13 213337.png';
+import serviceImg3 from '../images/subin.jpeg';
 import serviceImg4 from '../images/image_2/IMG_20260219_145847.jpg.jpeg';
 import serviceImg5 from '../images/Medical Equipment Supply_1.png';
 import serviceImg6 from '../images/Medicine Supply.jpg';

@@ -8,7 +8,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import healthcareVideo from '../videos/VID_20260220111944.mp4';
 import teamImg from '../images/IMG_20250918_123859.png';
 import serviceImg1 from '../images/Screenshot 2025-12-13 214931.png';
 import serviceImg2 from '../images/image_1/IMG-20250116-WA0130.jpg.jpeg';
@@ -28,6 +27,8 @@ import galleryImg12 from '../images/image_1/IMG_20251026_120442_351.jpg.jpeg';
 import award1 from '../images/awards/WhatsApp Image 2026-02-19 at 3.44.10 PM.jpeg';
 import award2 from '../images/awards/WhatsApp Image 2026-02-19 at 3.44.11 PM (1).jpeg';
 import award3 from '../images/awards/WhatsApp Image 2026-02-19 at 3.44.11 PM.jpeg';
+//import healthcareVideo from '../videos/VID_20260220111944.mp4';
+
 
 const Home = () => {
   const featuresRef = useRef([]);
@@ -204,7 +205,8 @@ const Home = () => {
                 loop
                 playsInline
               >
-                <source src={healthcareVideo} type="video/mp4" />
+                <source src="https://res.cloudinary.com/morningstarhealthcare/video/upload/q_auto,f_auto/v1771590361/VID_20260220111944_tzh966.mp4" type="video/mp4" />
+                {/* <source src={healthcareVideo} type="video/mp4" /> */}
                 Your browser does not support the video tag.
               </video>
             </div>

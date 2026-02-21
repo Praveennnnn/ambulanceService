@@ -43,7 +43,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2022 – 2023',
       year: 2022,
-      teamSize: '2 Nurses, 3 First Aiders',
+      teamSize: '1 Nurse, 1 Ambulance, 1 Driver | Lead By: Mr. Subash',
       workersServed: 300,
       industryType: 'Commercial',
       services: [
@@ -62,7 +62,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2023 – 2024',
       year: 2023,
-      teamSize: '1 Doctor, 2 Nurses, 2 First Aiders',
+      teamSize: '1 Doctor, 1 Nurse, 1 Driver, 1 Ambulance | Lead By: Dr. Hanumanth',
       workersServed: 450,
       industryType: 'Commercial',
       services: [
@@ -81,7 +81,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2023 – 2024',
       year: 2023,
-      teamSize: '1 Doctor, 3 Nurses, 4 First Aiders',
+      teamSize: '1 Nurse, 1 Driver, 1 Ambulance | Lead By: Mr. Jebastin',
       workersServed: 800,
       industryType: 'Tech Park',
       services: [
@@ -100,7 +100,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2024',
       year: 2024,
-      teamSize: '1 Doctor, 2 Nurses',
+      teamSize: '1 Nurse | Lead By: Mr. Subash',
       workersServed: 350,
       industryType: 'Corporate',
       services: [
@@ -119,7 +119,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2024',
       year: 2024,
-      teamSize: '2 Nurses, 3 First Aiders',
+      teamSize: '1 Driver, 1 Ambulance | Lead By: Mr. Subin',
       workersServed: 400,
       industryType: 'Construction',
       services: [
@@ -138,7 +138,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2025 to 2026',
       year: 2025,
-      teamSize: '2 Doctors, 4 Nurses, 6 First Aiders',
+      teamSize: '1 Doctor, 2 Nurses, 2 Drivers, 1 Ambulance | Lead By: Dr. Shimsha',
       workersServed: 1200,
       industryType: 'Construction',
       services: [
@@ -157,7 +157,7 @@ const Projects = () => {
       location: 'Chennai',
       duration: '2025',
       year: 2025,
-      teamSize: '1 Doctor, 3 Nurses, 4 First Aiders',
+      teamSize: '1 Nurse, 1 Driver, 1 Ambulance | Lead By: Mr. Ramar',
       workersServed: 600,
       industryType: 'Construction',
       services: [
@@ -176,7 +176,7 @@ const Projects = () => {
       location: 'Hyderabad',
       duration: '2025',
       year: 2025,
-      teamSize: '1 Doctor, 2 Nurses, 3 First Aiders',
+      teamSize: '1 Nurse, 1 Driver, 1 Ambulance | Lead By: Mr. Sankalan',
       workersServed: 500,
       industryType: 'Construction',
       services: [
@@ -212,7 +212,7 @@ const Projects = () => {
       location: 'Kolkata',
       duration: '2026',
       year: 2026,
-      teamSize: '2 Doctors, 3 Nurses, 5 First Aiders',
+      teamSize: '1 Nurse, 1 Driver, 1 Ambulance | Lead By: Mr. Bikram',
       workersServed: 900,
       industryType: 'Commercial',
       services: [
@@ -231,7 +231,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2026',
       year: 2026,
-      teamSize: '1 Doctor, 3 Nurses, 4 First Aiders',
+      teamSize: '1 Driver, 1 Ambulance | Lead By: Mr. Rafier',
       workersServed: 700,
       industryType: 'Construction',
       services: [
@@ -250,7 +250,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2026',
       year: 2026,
-      teamSize: '1 Doctor, 2 Nurses, 3 First Aiders',
+      teamSize: '1 Doctor, 2 Nurses, 3 First Aiders | Lead By: Dr. Mathusuthan',
       workersServed: 400,
       industryType: 'Industrial',
       services: [
@@ -269,7 +269,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2026',
       year: 2026,
-      teamSize: '1 Doctor, 2 Nurses, 2 First Aiders',
+      teamSize: '1 Doctor, 1 Nurse, 1 Ambulance | Lead By: Dr. Mathusuthan',
       workersServed: 350,
       industryType: 'Industrial',
       services: [
@@ -355,19 +355,19 @@ const Projects = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             <div className="text-center group hover:scale-105 transition-transform">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 mb-2">
-                {stats.totalProjects}
+                15
               </div>
               <p className="text-gray-600 font-medium text-sm md:text-base">Total Projects</p>
             </div>
             <div className="text-center group hover:scale-105 transition-transform">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600 mb-2">
-                {stats.ongoingProjects}
+                8
               </div>
               <p className="text-gray-600 font-medium text-sm md:text-base">Ongoing</p>
             </div>
             <div className="text-center group hover:scale-105 transition-transform">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-2">
-                {stats.completedProjects}
+                7
               </div>
               <p className="text-gray-600 font-medium text-sm md:text-base">Completed</p>
             </div>
@@ -379,7 +379,7 @@ const Projects = () => {
             </div>
             <div className="text-center group hover:scale-105 transition-transform">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 mb-2">
-                {stats.totalWorkers}+
+                1000+
               </div>
               <p className="text-gray-600 font-medium text-sm md:text-base">Workers Served</p>
             </div>
