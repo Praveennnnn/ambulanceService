@@ -209,6 +209,129 @@ const About = () => {
             </div>
           </div>
 
+          {/* Our Leadership Team */}
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                  Our Leadership & Key Personnel
+                </span>
+              </h2>
+              <p className="text-gray-600 text-sm max-w-2xl mx-auto">
+                Meet the dedicated professionals driving our mission to deliver exceptional healthcare services
+              </p>
+              <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* CEO */}
+              <div className="group bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Dr. Subash David</h3>
+                  <p className="text-white/80 text-sm mb-3">Bsc, MBA, PHIL</p>
+                  <div className="bg-yellow-400 text-gray-900 font-bold px-4 py-2 rounded-full inline-block text-sm">
+                    Chief Executive Officer
+                  </div>
+                </div>
+              </div>
+
+              {/* Executive Officer 1 */}
+              <div className="group bg-gradient-to-br from-purple-500 to-pink-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Heart className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Dr. Ilakkiya</h3>
+                  <p className="text-white/80 text-sm mb-3">B.H.M.S</p>
+                  <div className="bg-white text-purple-700 font-bold px-4 py-2 rounded-full inline-block text-sm">
+                    Executive Officer
+                  </div>
+                </div>
+              </div>
+
+              
+              {/* Senior Consultant */}
+              <div className="group bg-gradient-to-br from-indigo-500 to-violet-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Heart className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Dr. Mathu Suthan</h3>
+                  <p className="text-white/80 text-sm mb-3">M.B.B.S</p>
+                  <div className="bg-white text-indigo-700 font-bold px-4 py-2 rounded-full inline-block text-sm">
+                    Senior Consultant
+                  </div>
+                </div>
+              </div>
+
+             
+
+              {/* Site Incharge */}
+              <div className="group bg-gradient-to-br from-orange-500 to-red-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Mr. Subin</h3>
+                  <p className="text-white/80 text-sm mb-3">ITI</p>
+                  <div className="bg-white text-orange-700 font-bold px-4 py-2 rounded-full inline-block text-sm">
+                    Site Incharge
+                  </div>
+                </div>
+              </div>
+
+               {/* Executive Officer 2 */}
+              <div className="group bg-gradient-to-br from-cyan-500 to-blue-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Mr. Praveen KN </h3>
+                  <p className="text-white/80 text-sm mb-3">B.E</p>
+                  <div className="bg-white text-cyan-700 font-bold px-4 py-2 rounded-full inline-block text-sm">
+                    Executive Officer
+                  </div>
+                </div>
+              </div>
+
+               {/* First Aid Instructor */}
+              <div className="group bg-gradient-to-br from-green-500 to-emerald-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Award className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Mr. Lakshmipathy</h3>
+                  <p className="text-white/80 text-sm mb-3">MBA</p>
+                  <div className="bg-white text-green-700 font-bold px-4 py-2 rounded-full inline-block text-sm">
+                    First Aid Instructor
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
           {/* Expansion Timeline */}
           <div className="mb-20">
             <div className="text-center mb-12">

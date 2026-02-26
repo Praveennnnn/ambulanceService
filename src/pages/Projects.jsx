@@ -231,7 +231,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2026',
       year: 2026,
-      teamSize: '1 Driver, 1 Ambulance | Lead By: Mr. Rafier',
+      teamSize: '1 Doctor, 2 Nurses, 1 Driver, 1 Ambulance | Lead By: Dr. Subash',
       workersServed: 700,
       industryType: 'Construction',
       services: [
@@ -250,7 +250,7 @@ const Projects = () => {
       location: 'Bangalore',
       duration: '2026',
       year: 2026,
-      teamSize: '1 Doctor, 2 Nurses, 3 First Aiders | Lead By: Dr. Mathusuthan',
+      teamSize: '1 Driver, 1 Ambulance | Lead By: Mr. Rafier',
       workersServed: 400,
       industryType: 'Industrial',
       services: [
