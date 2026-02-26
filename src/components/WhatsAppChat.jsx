@@ -6,7 +6,7 @@ const WhatsAppChat = () => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   // Replace with your actual WhatsApp business number (with country code, no + or spaces)
-  const whatsappNumber = '9790154835'; // Example: 919876543210 for India
+  const whatsappNumber = '919790154835'; // Example: 919876543210 for India
 
   const quickMessages = {
     emergency: {
